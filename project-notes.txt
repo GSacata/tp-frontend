@@ -1,0 +1,8 @@
+Set-ExecutionPolicy Unrestricted -Scope Process
+cd frontend
+ng serve -o
+
+npm install -g @angular/cli
+
+GUIDES AND LINKS
+https://angular.io/tutorial/tour-of-heroes/toh-pt0
