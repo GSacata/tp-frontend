@@ -1,10 +1,57 @@
-<p>todolist works!</p>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-<div *ngFor="let item of task">
-    <span>id: {{item.id}}</span><br>
+<section class="todo-body">
+    <div class="titles-div">
+        <h1>Todo List</h1>
+        <p>Django + Django REST + Angular</p>
+    </div>
+    <div class="tasks-div">
+        <div *ngFor="let item of task">
+            <div class="task">
+                <div class="task-shown">
+                    <span *ngIf="item.is_done == false" class="material-symbols-outlined icon-set-1 icon-box">radio_button_unchecked</span>
+                    <span *ngIf="item.is_done == true" class="material-symbols-outlined icon-set-1 icon-box">radio_button_checked</span>
+                    <p class="tasktitle">{{item.title}}</p>
+                    <div class="icon-set-2">
+                        <span class="material-symbols-outlined icon-box">edit_square</span>
+                        <span class="material-symbols-outlined icon-box">delete</span>
+                    </div>
+                </div>
+            </div>
+            <div class="task">
+                <div class="task-hidden id-strip">
+                    <span class="id-container">{{item.id}}</span>
+                </div>
+                <div class="task-shown">
+                    <span *ngIf="item.is_done == false" class="material-symbols-outlined icon-set-1 icon-box">radio_button_unchecked</span>
+                    <span *ngIf="item.is_done == true" class="material-symbols-outlined icon-set-1 icon-box">radio_button_checked</span>
+                    <p class="tasktitle">{{item.title}}</p>
+                    <div class="icon-set-2">
+                        <span class="material-symbols-outlined icon-box">edit_square</span>
+                        <span class="material-symbols-outlined icon-box">delete</span>
+                    </div>
+                </div>
+                <div class="task-hidden desc-strip">
+                    <div class="desc-container">{{item.description}}</div>
+                    <div>Created: {{item.created}}<br>Last Update: {{item.last_update}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- <span>id: {{item.id}}</span><br>
     <span>title: {{item.title}}</span><br>
     <span>description: {{item.description}}</span><br>
     <span>is_done: {{item.is_done}}</span><br>
     <span>created: {{item.created}}</span><br>
-    <span>last_update: {{item.last_update}}</span><br>
-</div>
+    <span>last_update: {{item.last_update}}</span><br> -->
+    <div class="texts-div">
+        <p>
+            This task list is part of the programming test.<br>
+            Currently the tasks shown are only mock tasks, stored inside an array. No methods such as GET, POST, PUT and DELETE are working yet.<br>
+            I intend to make a sliding, toggling body for the tasks. The first version is the closed task, the second, the open.
+        </p>
+        <p>Made by GSacata</p>
+    </div>
+</section>
