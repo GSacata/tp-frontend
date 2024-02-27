@@ -1,10 +1,10 @@
 <p>todolist works!</p>
 
-<div>
-    <span>id: {{task.id}}</span><br>
-    <span>title: {{task.title}}</span><br>
-    <span>description: {{task.description}}</span><br>
-    <span>is_done: {{task.is_done}}</span><br>
-    <span>created: {{task.created}}</span><br>
-    <span>last_update: {{task.last_update}}</span><br>
+<div *ngFor="let item of task">
+    <span>id: {{item.id}}</span><br>
+    <span>title: {{item.title}}</span><br>
+    <span>description: {{item.description}}</span><br>
+    <span>is_done: {{item.is_done}}</span><br>
+    <span>created: {{item.created}}</span><br>
+    <span>last_update: {{item.last_update}}</span><br>
 </div>
