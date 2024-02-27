@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ApiService {
 
   base_url = "http://127.0.0.1:8000"
@@ -13,7 +14,7 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getAllTasks(): Observable<any> {
-    return this.http.get(this.base_url + "/todo/", {headers: this.httpHeaders})
+    return this.http.get(this.base_url + "/todo/", {headers: this.httpHeaders});
   }
 }
 

@@ -1,13 +1,14 @@
 import { NgFor, NgIf } from "@angular/common";
 import { NgModule } from "@angular/core";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
     declarations: [],
     imports: [
-        NgFor, NgIf
+        NgFor, NgIf, HttpClientModule
     ],
     exports: [
-        NgFor, NgIf
+        NgFor, NgIf, HttpClientModule
     ],
     providers: [],
     bootstrap: []

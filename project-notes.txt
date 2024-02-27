@@ -7,3 +7,11 @@ npm install -g @angular/cli
 GUIDES AND LINKS
 https://angular.io/tutorial/tour-of-heroes/toh-pt0
 https://www.youtube.com/watch?v=z_H-oxQVsPw
+
+getMovies = () => {
+    this.api.getAllMovies().subscribe({
+        next: data => { this.movies = data },
+        error: err => { console.log(err) },
+        complete: () => { console.log("Pegou dados") }
+      })
+  }
