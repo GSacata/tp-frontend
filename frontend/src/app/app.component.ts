@@ -19,17 +19,4 @@ import { ApiService } from './services/api.service';
 export class AppComponent {
   title = 'frontend';
 
-  tasks = []
-
-  constructor (private api: ApiService) {
-    this.getTasks()
-  }
-
-  getTasks = () => {
-    this.api.getAllTasks().subscribe({
-      next: data => { this.tasks = data },
-      error: err => { console.log(err) },
-      complete: () => { console.log("Pegou dados") }
-    })
-  }
 }
